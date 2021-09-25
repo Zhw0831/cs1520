@@ -63,3 +63,91 @@ body::-webkit-scrollbar-thumb {
     display: block;
     margin: 1rem 5rem 0 5rem;
 }
+
+main {
+    margin-left: 5rem;
+    margin-right: 5rem;
+    padding: 1rem;
+}
+
+div {
+    display: inline-block;
+}
+
+.welcome {
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 5rem;
+}
+
+.welcomeBlock {
+    width: 80%;
+    font-size: 5rem;
+    justify-content: space-evenly;
+    margin-bottom: 15rem;
+}
+
+.welcome, .welcomeBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button {
+    background-color: #6B9080;
+    
+}
+
+.btn6 {
+    padding: 15px 10px;
+    margin:10px 4px;
+    color: black;
+    text-align: center;
+    position: relative;
+    text-decoration: none;
+    display:inline-block;
+    border:1px solid transparent; 
+    -webkit-transition: all 0.4s cubic-bezier(.5, .24, 0, 1);
+    transition: all 0.4s cubic-bezier(.5, .24, 0, 1);
+}
+
+.btn6::before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom:0px;
+    z-index:-1;
+    width: 0%;
+    height:1px;
+    background: #6B9080;
+    box-shadow: inset 0px 0px 0px #6B9080;
+    display: block;
+    -webkit-transition: all 0.4s cubic-bezier(.5, .24, 0, 1);
+    transition: all 0.4s cubic-bezier(.5, .24, 0, 1)
+}
+
+.btn6:hover::before {
+    width:100%;
+}
+
+.btn6::after {
+    content: '';
+    position: absolute;
+    right: 0px;
+    top:0px;
+    z-index:-1;
+    width: 0%;
+    height:1px;
+    background: #6B9080;
+    -webkit-transition: all 0.4s cubic-bezier(.5, .24, 0, 1);
+    transition: all 0.4s cubic-bezier(.5, .24, 0, 1)
+}
+
+.btn6:hover::after {
+    width:100%;
+}
+
+.btn6:hover{
+    border-left:1px solid #6B9080;
+    border-right:1px solid #6B9080;
+}
