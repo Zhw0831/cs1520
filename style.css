@@ -5,8 +5,8 @@ html {
 body {
     margin: 0;
     padding: 0;
-    font-family: Sans-Serif;
-    background: linear-gradient(to right,#fffcd1,white);
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(to right,#99EE99,#99EE99,#C7F6B6,#C7F6B6,#E2FAB5,#E2FAB5,#FFF9C2,#FFFCD1);
 }
 
 body::-webkit-scrollbar {
@@ -83,9 +83,10 @@ div {
 
 .welcomeBlock {
     width: 80%;
-    font-size: 5rem;
+    font-size: 4.5rem;
     justify-content: space-evenly;
     margin-bottom: 15rem;
+    color: darkgreen;
 }
 
 .welcome, .welcomeBlock {
@@ -115,8 +116,8 @@ div {
     z-index:-1;
     width: 0%;
     height:1px;
-    background: #99EE99;
-    box-shadow: inset 0px 0px 0px #99EE99;
+    background: #3cb371;
+    box-shadow: inset 0px 0px 0px #3cb371;
     display: block;
     -webkit-transition: all 0.4s cubic-bezier(.5, .24, 0, 1);
     transition: all 0.4s cubic-bezier(.5, .24, 0, 1)
@@ -134,7 +135,7 @@ div {
     z-index:-1;
     width: 0%;
     height:1px;
-    background: #99EE99;
+    background: #3cb371;
     -webkit-transition: all 0.4s cubic-bezier(.5, .24, 0, 1);
     transition: all 0.4s cubic-bezier(.5, .24, 0, 1)
 }
@@ -144,6 +145,6 @@ div {
 }
 
 .btn6:hover {
-    border-left:1px solid #99EE99;
-    border-right:1px solid #99EE99;
+    border-left:1px solid #3cb371;
+    border-right:1px solid #3cb371;
 }
