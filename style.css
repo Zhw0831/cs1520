@@ -148,3 +148,14 @@ div {
     border-left:1px solid #3cb371;
     border-right:1px solid #3cb371;
 }
+
+#content-container{
+    position: relative;
+    top: 3rem;
+}
+#content-container>h1{
+    padding-left: 4rem;
+
+}#content-container>p{
+    padding-left: 6rem;
+}
