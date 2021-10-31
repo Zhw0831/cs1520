@@ -111,3 +111,10 @@ img {
     display: block;
     margin: 3rem 5rem 0 5rem;
 }
+
+.navbar .navbar-nav .logo{
+  width: 100px;
+  height: 100px;
+  margin-left: 100px;
+  margin-top: 30px; 
+}
