@@ -1,10 +1,16 @@
 <!DOCTYPE html>
 <html lang = "en">
+<script>
+    function nextQuestion(){
+        let nextId = parseInt(document.getElementById("id").value) + 1
+        window.location.href = `/questions/${nextId}`
+    }
+</script>
 <head>
     <meta charset="UTF-8">
 	<title>Have A Great Day Quiz</title>
-    <link rel="stylesheet" href="/s/style.css">
-    <link rel="stylesheet" href="/s/quiz.css">
+    <link rel="stylesheet" href="/static-files-folder/style.css">
+    <link rel="stylesheet" href="/static-files-folder/quiz.css">
 </head>
 <body>
 
@@ -36,21 +42,11 @@
                     <input type="radio" name="choice" value="{{choice}}"> {{choice}}
                 </div>
             {% endfor %}
-{#            <div>#}
-{#                <input type="radio" name="choice" value="A" checked> A#}
-{#            </div>#}
-{#    #}
-{#            <div>#}
-{#                <input type="radio" name="choice" value="B"> B#}
-{#            </div>#}
-{#    #}
-{#            <div>#}
-{#                <input type="radio" name="choice" value="C"> C#}
-{#            </div>#}
+            <input hidden id="id" name="id" value="{{id}}">
         </form>
     
-        <button class="link-text">Next Question</button>
-    <div>
+        <button  class="link-text" onclick="nextQuestion()">Next Question</button>
+    </div>
 
 </body>
 
