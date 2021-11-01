@@ -156,6 +156,12 @@ div {
 #content-container>h1{
     padding-left: 4rem;
 
-}#content-container>p{
+}
+
+#content-container>p{
+    padding-left: 6rem;
+}
+
+#content-container>#first{
     padding-left: 6rem;
 }
