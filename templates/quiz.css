@@ -1,7 +1,7 @@
-#content-container>div{
+#content-container>form{
     padding-left: 6rem;
 }
-#content-container>div>div{
+#content-container>form>div{
     padding-top: 1rem;
     display: block;
 }
