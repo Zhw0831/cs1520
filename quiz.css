@@ -1,0 +1,7 @@
+#content-container>div{
+    padding-left: 6rem;
+}
+#content-container>div>div{
+    padding-top: 1rem;
+    display: block;
+}
