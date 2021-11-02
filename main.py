@@ -1,13 +1,23 @@
 import flask
 import random
+from flask import request
+from google.cloud import datastore
+
 
 app = flask.Flask(__name__)
 
-
 @app.route('/')
 def root():
-    return flask.redirect("/s/login.html", code=302)
+    return flask.redirect('/s/welcome.html', code=302)
 
+@app.route('/submit-form/', method=['GET', 'POST'])
+def store():
+    result = request.form['getEmail']
+    client = datastore.Client()
+    ekey = client.key('email', result)
+    task = datastore.Entity(key=ekey)
+    task["description"] = "New user to email!"
+    client.put(task)
 
 @app.route('/questions/<id>')
 def questions(id):
@@ -20,9 +30,7 @@ def questions(id):
             }
         )
 
-
     return flask.render_template("quiz.html", choices=choices_ans[int(id)],id = id)
-
 
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port=8080, debug=True)
