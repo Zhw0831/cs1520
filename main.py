@@ -7,8 +7,18 @@ from google.cloud import datastore
 app = flask.Flask(__name__)
 
 @app.route('/')
+@app.route('/welcome.html')
+@app.route('/s/welcome.html')
 def root():
     return flask.redirect('/s/welcome.html', code=302)
+
+@app.route('/login.html')
+def login():
+    return flask.render_template('login.html')
+
+@app.route('/quiz.html')
+def quiz():
+    return flask.render_template('quiz.html')
 
 @app.route('/submit-form/', method=['GET', 'POST'])
 def store():
