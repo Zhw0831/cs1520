@@ -5,16 +5,39 @@
 	<title>Have A Great Day Welcome</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="quiz.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
     <style>
-        span.ex1 {
+        body{
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(to right,#64b5f6,#90caf9,#90caf9,#bbdefb,#bbdefb,#e3f2fd);
+        }
+
+        h1 {
           font-size: 40px;
+          padding-left: 4rem;
         }
-        span.ex2 {
-          font-size: 30px;
+
+        .nav-link:hover {
+            filter: grayscale(0%) opacity(1);
+            color: darkblue;
         }
+
+        .welcomeBlock {
+            width: 80%;
+            font-size: 4.5rem;
+            justify-content: space-evenly;
+            margin-bottom: 15rem;
+            color: black;
+        }
+
+
     </style>
+
+
+        <script src="welcome.js" defer></script>
+
 </head>
-    <body>
+    <body onload="typeWriter()">
 
         <nav class="navbar">
             <ul class="navbar-nav">
@@ -43,15 +66,20 @@
 
         <div id="content-container">
             <br></br>
-            <span class="ex1" id="first">"</span><span class="ex2">Hope Can Never Be Taken Away</span><span class="ex1">"</span>
-            <br></br>
-            <h1>Our Mission</h1>
+            <p id="text1"></p>
+
+            <br><br><br><br>
+
+            <h1><strong>Our Mission</strong></h1>
+            
             <p> Mental health is something that needs constant attention and tender care!</p> 
             <p> Have A Great Day seeks to help our users in reducing their stress levels, </p>
             <p> providing advice and numerous resources to pinpoint exactly how a user is feeling. </p>
             <p> Additionally, users can take a quiz to keep track of the state of their mental health </p>
             <p> and find ways to improve their quality of life!</p>
+
             
+            <br><br><br>
         </div>
     </body>
 

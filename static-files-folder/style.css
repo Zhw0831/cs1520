@@ -24,7 +24,7 @@ body::-webkit-scrollbar-thumb {
 .navbar {
     width: 100vw;
     height: 3rem;
-    position: fixed;
+    position: absolute;
     z-index:1;
 }
 
@@ -50,6 +50,7 @@ body::-webkit-scrollbar-thumb {
     display: flex;
     align-items: center;
     color: black;
+    font-weight: bold;
     text-decoration: none;
     filter: grayscale(100%) opacity(0.7);
     transition: 200ms;
@@ -182,4 +183,11 @@ div {
     color: black;
     text-decoration: none;
     cursor: pointer;
+}
+
+#text1{
+    font-size: 70px;
+    font-weight: bold;
+    color: #0d47a1;
+    text-shadow: 2px 2px;
 }
