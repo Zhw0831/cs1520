@@ -9,9 +9,12 @@
 
 <body>
 
-<audio controls>
+<!-- <audio controls>
   <source src="/s/Always With Me(Piano).mp3" type="audio/mpeg" />
+</audio> -->
+<audio id="audioplayer" autobuffer="" loop="true" preload="auto" src="/s/Always With Me(Piano).mp3">
 </audio>
+<script src="/s/audio.js"></script>
 
 <title>
     Have A Great Day!
@@ -46,13 +49,13 @@
 
 <main>
 <div class="welcome">
-    <h1 class="welcomeBlock">
+    <!-- <h1 class="welcomeBlock">
         Let's Have A Great Day!
     </h1>
     
-    <button id="loginButton">Click here to get started!</button>
+    <button id="loginButton">Click here to get started!</button> -->
     
-    <div id="signIn" class="modal">
+    <!-- <div id="signIn" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
             <p>Sign in to get your results to your email</p>
@@ -61,14 +64,33 @@
                 Email:
                 <br>
                 <input type="text" name="email">
+                <br><br>
+                Password:
                 <br>
+                <input type="password" name="pwd">
+                <br><br>
                 <button type="submit" value="Submit">Submit</button>                
             </form>
             
         </div>
     </div>
 
-    <script type="text/javascript" src="/s/login.js"></script>
+    <script type="text/javascript" src="/s/login.js"></script> -->
+
+    <div class="login"> 
+        <div class="login-inner">
+
+        <h1 id="login-header">Log In</h1>
+        <h4 id="signup">No account? <a href = "signup.html">Sign up</a></h2>
+
+
+        <form id="login-form" action="/login" method="post">
+            <input type="text" name="email" id="email" class="login-form-field" placeholder="Email">
+            <input type="password" name="password" id="password" class="login-form-field" placeholder="Password">
+            <input type="submit" value="Submit" id="login-form-submit">
+        </form>
+        </div>
+    </div>
     
 </div>
 </main>
