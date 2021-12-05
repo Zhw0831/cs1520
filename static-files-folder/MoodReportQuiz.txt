@@ -1,0 +1,100 @@
+1. The state of your anxiety for today can be described as:
+	a. Severe
+	b. Moderate
+	c. Mild
+	d. None
+2. The state of your depression for today can be described as:
+        a. Severe
+        b. Moderate
+        c. Mild
+        d. None
+3. The state of your irritability for today can be described as:
+        a. Severe
+        b. Moderate
+        c. Mild
+        d. None
+4. You had restful sleep last night:
+        a. Agree
+        b. Somewhat agree
+        c. Somewhat disagree
+        d. Disagree
+5. You had trouble focusing/concentrating today:
+        a. Agree
+        b. Somewhat agree
+        c. Somewhat disagree
+        d. Disagree
+6. You have been able to enjoy your usual activities that bring you pleasure:
+        a. Agree
+        b. Somewhat agree
+        c. Somewhat disagree
+        d. Disagree
+7. You have felt “slower” than your usual pace throughout the day:
+        a. Agree
+        b. Somewhat agree
+        c. Somewhat disagree
+        d. Disagree
+8. Over the past week, how often have you felt down, depressed, or hopeless:
+	a. Not at all
+	b. A day/a few days
+	c. Half the days
+	d. Every day/Nearly every day
+9. Over the past week, how often have you felt fatigued or out of energy:
+	a. Not at all
+	b. A day/a few days
+	c. Half the days
+	d. Every day/Nearly every day
+10. Over the past week, how often have you had issues with your appetite:
+	a. Not at all
+	b. A day/a few days
+	c. Half the days
+	d. Nearly every day/Every day
+11. Over the past week, how often have you felt nervous or on edge:
+	a. Not at all
+	b. A day/a few days
+	c. Half the days
+	d. Nearly every day/Every day
+12. Your opinion of yourself can be described as:
+	a. Poor
+	b. Average
+	c. Good 
+	d. Excellent
+13. Your opinion on your future (immediate or distant) can be described as:
+        a. Poor
+	b. Average
+	c. Good 
+	d. Excellent
+14. Your ability to connect with other people can be best described as:
+        a. Poor
+	b. Average
+	c. Good 
+	d. Excellent
+15. How often do you feel you are in control of your worrying:
+        a. Often
+	b. Sometimes
+	c. Rarely
+	d. Never
+16. How often do you feel you have difficulty with breathing or swallowing:
+        a. Often
+	b. Sometimes
+	c. Rarely
+	d. Never
+17. How often do you have thoughts about hurting yourself:
+        a. Often
+	b. Sometimes
+	c. Rarely
+	d. Never
+18. How often do you feel guilty:
+        a. Often
+	b. Sometimes
+	c. Rarely
+	d. Never
+19. How often do you find yourself using substances such as alcohol, marijuanna, hallucinogens, or any other chemical substance?
+        a. Often
+	b. Sometimes
+	c. Rarely
+	d. Never
+20. How difficult have any problems highlighted in your answers in the quiz made your day-to-day life?
+        a. Not difficult
+        b. Somewhat difficult
+        c. Very Difficult
+        d. Extremely Difficult
