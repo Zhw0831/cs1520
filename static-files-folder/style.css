@@ -195,7 +195,7 @@ div {
 }
 
 
-  #login-header {
+  #login-header,#signup-header {
     font-size: 45px;
     line-height: 0.5;
   }
@@ -217,6 +217,19 @@ div {
     border-radius: 6px;
     box-shadow: 0px 0px 3px 2px darkgreen;
   }
+
+  .signup{
+    width: 70%;
+    height: 600px;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    background: url("/s/smile.jpg") lightgoldenrodyellow;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    border-radius: 6px;
+    box-shadow: 0px 0px 3px 2px darkgreen;
+  }
   
   .login-inner{
       width: 45%;
@@ -227,20 +240,36 @@ div {
       background-color:lightgoldenrodyellow;
       border-radius: 10px;
   }
+
+  .signup-inner{
+    width: 50%;
+    height: 500px;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    background-color:lightgoldenrodyellow;
+    border-radius: 10px;  
+  }
   
-  #login-form {
+  #login-form, #signup-form {
     align-self: flex-start;
     display: grid;
     justify-items: center;
     align-items: center;
   }
+
+  #gender-form{
+      justify-items: left;
+      align-items: left;
+  }
+
   
-  .login-form-field::placeholder {
+  .login-form-field::placeholder, .signup-form-field::placeholder {
     color: black;
     font-family: 'Montserrat', sans-serif;
   }
   
-  .login-form-field {
+  .login-form-field, .signup-form-field {
     border: none;
     border-bottom: 1px solid black;
     margin-bottom: 20px;
@@ -252,6 +281,19 @@ div {
   #login-form-submit {
     width: 80%;
     padding: 10px;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    background-color: green;
+    cursor: pointer;
+    outline: none;
+  }
+
+  #signup-form-submit{
+    width: 80%;
+    padding: 15px;
     border: none;
     border-radius: 3px;
     color: white;

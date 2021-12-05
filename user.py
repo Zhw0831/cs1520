@@ -10,35 +10,35 @@ def create_user():
 
 
 class User_manager():
-    def find_user(self, username):
+    def find_user(self, email):
         client = get_client()
         query = client.query(kind = 'user')
-        query.add_filter("username", "=", username) 
+        query.add_filter("email", "=", email) 
         user = None
 
         for entity in query.fetch():
             user = entity
         return user
 
-    def register(self, username, password, age, gender):
-        user = self.find_user(username)
+    def register(self, email, password, age, gender):
+        user = self.find_user(email)
         if user is not None:
-            return "Username is taken"
+            return "Your email is valid."
 
         user = create_user()
-        user['username'] = username
+        user['email'] = email
         user['password'] = password
         user['age'] = age
         user['gender'] = gender
         client = get_client()
         client.put(user)
 
-    def login(self, username, password):
-        user = self.find_user(username)
+    def login(self, email, password):
+        user = self.find_user(email)
         if user == None:
-            return "User Not Found"
+            return "There is no user associated with this email. Please sign up first."
 
         if user['password'] != password:
-            return "Wrong Password"
+            return "The password is wrong."
         
         return user
