@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang = "en">
+<!-- <script>
+    // function nextQuestion(){
+    //     let nextId = parseInt(document.getElementById("id").value) + 1
+    //     window.location.href = `/questions/${nextId}`
+    // }
+</script> -->
+<head>
+    <meta charset="UTF-8">
+	<title>Have A Great Day Quiz</title>
+    <link rel="stylesheet" href="/s/quiz.css">
+    <!-- <link rel="stylesheet" href="/s/style.css"> -->
+    
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+
+    <style>
+        .body{            
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(to right,#ffde73,#ffde73,#ffe773,#ffe773,#fff172,#fff172,#FFFa72,#FFFa72);
+        }
+.nav-link:hover {
+    filter: grayscale(0%) opacity(1);
+    color: whitesmoke;
+}
+    </style>
+</head>
+<body>
+    <audio id="audioplayer" autobuffer="" loop="true" preload="auto" src="/s/Always With Me(Piano).mp3">
+    </audio>
+    <script src="/s/audio.js"></script>
+    
+    <script src="/s/quiz.js"></script>
+
+    <nav class="navbar">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a href="/s/welcome.html" class="nav-link">
+                    <span class="link-text">Welcome</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="/s/quiz.html" class="nav-link">
+                    <span class="link-text">Take the Quiz</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="/s/resources.html" class="nav-link">
+                    <span class="link-text">Resources</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="/login.html" class="nav-link">
+                    <span class="link-text">Login</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <br><br>
+<!-- 
+    <center>
+    <div id="content-container">
+    <h1>TestQ</h1> -->
+        <!-- <form>
+            {% for choice in choices.choice %}
+                <div>
+                    <input type="radio" name="choice" value="{{choice}}"> {{choice}}
+                </div>
+            {% endfor %}
+            <input hidden id="id" name="id" value="{{id}}">
+        </form>
+    
+        <button  class="link-text" onclick="nextQuestion()">Next Question</button> -->
+    <!-- </div> -->
+    <br><br><br>
+    <center>
+<div id="wrapper">
+    <h1>How are you today?</h1>
+    <p>Take this quiz to find out!</p>
+
+    
+    <form id="quiz">
+      <!-- Question 1 -->
+      <h2>1. The state of your anxiety for today can be described as:</h2>
+      <!-- Here are the choices for the first question. Each input tag must have the same name. For this question, the name is q1. -->
+      <!-- The value is which answer the choice corresponds to. -->
+      <label><input type="radio" name="q1" value="c1">
+        Severe
+      </label><br />
+      <label><input type="radio" name="q1" value="c2">
+        Moderate
+      </label><br />
+      <label><input type="radio" name="q1" value="c3">
+        Mild
+      </label><br />
+      <label><input type="radio" name="q1" value="c4">
+        None
+      </label><br />
+  <br>
+      <!-- Question 2 -->
+      <h2>2. The state of your depression for today can be described as:</h2>
+      <!-- Here are the choices for the second question. Notice how each input tag has the same name (q2), but a different name than the previous question. -->
+      <label><input type="radio" name="q2" value="c1">
+        Severe
+      </label><br />
+      <label><input type="radio" name="q2" value="c2">
+        Moderate
+      </label><br />
+      <label><input type="radio" name="q2" value="c3">
+        Mild
+      </label><br />
+      <label><input type="radio" name="q2" value="c4">
+        None
+      </label><br />
+      <br>    
+      <!-- Question 3 -->
+      <h2>3. The state of your irritability for today can be described as:</h2>
+      <!-- Choices for the third question -->
+      <label><input type="radio" name="q3" value="c1">
+        Severe
+      </label><br />
+      <label><input type="radio" name="q3" value="c2">
+        Moderate
+      </label><br />
+      <label><input type="radio" name="q3" value="c3">
+        Mild
+      </label><br />
+      <label><input type="radio" name="q3" value="c4">
+        None
+      </label><br />
+      <br>
+      <!-- Question 4 -->
+      <h2>4. You had restful sleep last night:</h2>
+      <!-- Choices for the fourth question -->
+      <label><input type="radio" name="q4" value="c1">
+        Disagree
+      </label><br />
+      <label><input type="radio" name="q4" value="c2">
+        Somewhat disagree
+      </label><br />
+      <label><input type="radio" name="q4" value="c3">
+        Somewhat agree
+      </label><br />
+      <label><input type="radio" name="q4" value="c4">
+        Agree
+      </label><br />
+      <br>
+      <h2>5. You had trouble focusing/concentrating today:</h2>
+      <!-- Choices for the fourth question -->
+      <label><input type="radio" name="q5" value="c4">
+        Disagree
+      </label><br />
+      <label><input type="radio" name="q5" value="c3">
+        Somewhat disagree
+      </label><br />
+      <label><input type="radio" name="q5" value="c2">
+        Somewhat agree
+      </label><br />
+      <label><input type="radio" name="q5" value="c1">
+        Agree
+      </label><br />
+      <br>
+      <h2>6. You have been able to enjoy your usual activities that bring you pleasure:</h2>
+      <!-- Choices for the fourth question -->
+      <label><input type="radio" name="q6" value="c1">
+        Disagree
+      </label><br />
+      <label><input type="radio" name="q6" value="c2">
+        Somewhat disagree
+      </label><br />
+      <label><input type="radio" name="q6" value="c3">
+        Somewhat agree
+      </label><br />
+      <label><input type="radio" name="q6" value="c4">
+        Agree
+      </label><br />
+      <br>
+      <h2>7.  You have felt “slower” than your usual pace throughout the day:</h2>
+      <!-- Choices for the fourth question -->
+      <label><input type="radio" name="q7" value="c4">
+        Disagree
+      </label><br />
+      <label><input type="radio" name="q7" value="c3">
+        Somewhat disagree
+      </label><br />
+      <label><input type="radio" name="q7" value="c2">
+        Somewhat agree
+      </label><br />
+      <label><input type="radio" name="q7" value="c1">
+        Agree
+      </label><br />
+      <br>
+      <h2>8. Over the past week, how often have you felt down, depressed, or hopeless:</h2>
+      <!-- Choices for the fourth question -->
+      <label><input type="radio" name="q8" value="c1">
+        Every day/Nearly every day
+      </label><br />
+      <label><input type="radio" name="q8" value="c2">
+        Half the days
+      </label><br />
+      <label><input type="radio" name="q8" value="c3">
+        A day/a few days
+      </label><br />
+      <label><input type="radio" name="q8" value="c4">
+        Not at all
+      </label><br />
+      <br>
+      <h2>9. Over the past week, how often have you felt fatigued or out of energy:</h2>
+      <!-- Choices for the fourth question -->
+      <label><input type="radio" name="q9" value="c1">
+        Every day/Nearly every day
+      </label><br />
+      <label><input type="radio" name="q9" value="c2">
+        Half the days
+      </label><br />
+      <label><input type="radio" name="q9" value="c3">
+        A day/a few days
+      </label><br />
+      <label><input type="radio" name="q9" value="c4">
+        Not at all
+      </label><br />
+      <br>
+      <h2>10. Over the past week, how often have you had issues with your appetite:</h2>
+      <!-- Choices for the fourth question -->
+      <label><input type="radio" name="q10" value="c1">
+        Every day/Nearly every day
+      </label><br />
+      <label><input type="radio" name="q10" value="c2">
+        Half the days
+      </label><br />
+      <label><input type="radio" name="q10" value="c3">
+        A day/a few days
+      </label><br />
+      <label><input type="radio" name="q10" value="c4">
+        Not at all
+      </label><br />
+      <br>
+      <h2>11. Over the past week, how often have you felt nervous or on edge:</h2>
+      <!-- Choices for the fourth question -->
+      <label><input type="radio" name="q11" value="c1">
+        Every day/Nearly every day
+      </label><br />
+      <label><input type="radio" name="q11" value="c2">
+        Half the days
+      </label><br />
+      <label><input type="radio" name="q11" value="c3">
+        A day/a few days
+      </label><br />
+      <label><input type="radio" name="q11" value="c4">
+        Not at all
+      </label><br />
+      <br>
+      <h2>12. Your opinion of yourself can be described as:</h2>
+      <!-- Choices for the fourth question -->
+      <label><input type="radio" name="q12" value="c1">
+        Poor
+      </label><br />
+      <label><input type="radio" name="q12" value="c2">
+        Average
+      </label><br />
+      <label><input type="radio" name="q12" value="c3">
+        Good
+      </label><br />
+      <label><input type="radio" name="q12" value="c4">
+        Excellent
+      </label><br />
+      <br>
+      <h2>13. Your opinion on your future (immediate or distant) can be described as:</h2>
+      <!-- Choices for the fourth question -->
+      <label><input type="radio" name="q13" value="c1">
+        Poor
+      </label><br />
+      <label><input type="radio" name="q13" value="c2">
+        Average
+      </label><br />
+      <label><input type="radio" name="q13" value="c3">
+        Good
+      </label><br />
+      <label><input type="radio" name="q13" value="c4">
+        Excellent
+      </label><br />
+      <br>
+      <h2>14. Your ability to connect with other people can be best described as:</h2>
+      <!-- Choices for the fourth question -->
+      <label><input type="radio" name="q14" value="c1">
+        Poor
+      </label><br />
+      <label><input type="radio" name="q14" value="c2">
+        Average
+      </label><br />
+      <label><input type="radio" name="q14" value="c3">
+        Good
+      </label><br />
+      <label><input type="radio" name="q14" value="c4">
+        Excellent
+      </label><br />
+      <br>
+      <h2>15. How often do you feel you are out of control of your worrying:</h2>
+      <!-- Choices for the fourth question -->
+      <label><input type="radio" name="q15" value="c1">
+        Often
+      </label><br />
+      <label><input type="radio" name="q15" value="c2">
+        Sometimes
+      </label><br />
+      <label><input type="radio" name="q15" value="c3">
+        Rarely
+      </label><br />
+      <label><input type="radio" name="q15" value="c4">
+        Never
+      </label><br />
+      <br>
+      <h2>16. How often do you feel you have difficulty with breathing or swallowing:</h2>
+      <!-- Choices for the fourth question -->
+      <label><input type="radio" name="q16" value="c1">
+        Often
+      </label><br />
+      <label><input type="radio" name="q16" value="c2">
+        Sometimes
+      </label><br />
+      <label><input type="radio" name="q16" value="c3">
+        Rarely
+      </label><br />
+      <label><input type="radio" name="q16" value="c4">
+        Never
+      </label><br />
+      <br>
+      <h2>17. How often do you have thoughts about hurting yourself:</h2>
+      <!-- Choices for the fourth question -->
+      <label><input type="radio" name="q17" value="c1">
+        Often
+      </label><br />
+      <label><input type="radio" name="q17" value="c2">
+        Sometimes
+      </label><br />
+      <label><input type="radio" name="q17" value="c3">
+        Rarely
+      </label><br />
+      <label><input type="radio" name="q17" value="c4">
+        Never
+      </label><br />
+      <br>
+      <h2>18. How often do you feel guilty:</h2>
+      <!-- Choices for the fourth question -->
+      <label><input type="radio" name="q18" value="c1">
+        Often
+      </label><br />
+      <label><input type="radio" name="q18" value="c2">
+        Sometimes
+      </label><br />
+      <label><input type="radio" name="q18" value="c3">
+        Rarely
+      </label><br />
+      <label><input type="radio" name="q18" value="c4">
+        Never
+      </label><br />
+      <br>
+      <h2>19.  How often do you find yourself using substances such as alcohol, marijuanna, hallucinogens, or any other chemical substance?</h2>
+      <!-- Choices for the fourth question -->
+      <label><input type="radio" name="q19" value="c1">
+        Often
+      </label><br />
+      <label><input type="radio" name="q19" value="c2">
+        Sometimes
+      </label><br />
+      <label><input type="radio" name="q19" value="c3">
+        Rarely
+      </label><br />
+      <label><input type="radio" name="q19" value="c4">
+        Never
+      </label><br />
+      <br>
+      <h2>20. How difficult have any problems highlighted in your answers in the quiz made your day-to-day life?</h2>
+      <!-- Choices for the fourth question -->
+      <label><input type="radio" name="q20" value="c1">
+        Extremely Difficult
+      </label><br />
+      <label><input type="radio" name="q20" value="c2">
+        Very Difficult
+      </label><br />
+      <label><input type="radio" name="q20" value="c3">
+        Somewhat difficult
+      </label><br />
+      <label><input type="radio" name="q20" value="c4">
+        Not difficult
+      </label><br />
+      <br>
+      
+      <button type="button" id="submit" onclick="tabulateAnswers()">Submit Your Answers</button>
+
+    </form>
+    
+    
+    <div id="answer"></div>
+  </div>
+
+</body>
+
+</html>
