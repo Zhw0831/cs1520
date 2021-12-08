@@ -4,44 +4,49 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <script src="/static-files-folder/chart.min.js"></script>
+    <style>
+        .desp{
+            font-size: 32px;
+        }
+    </style>
 </head>
 <body>
-    <canvas id="myChart" width="400" height="400"></canvas>
+    <div style="height: 480px;width: 480px">
+        <canvas id="myChart" width="200" height="200"></canvas>
+    </div>
+    <br>
+    <div class="desp">
+        Based on the previous questions, your test score is 58.
+    </div>
+    <div class="desp">
+    Congratulations, you are in good spirits!
+    </div>
     <script>
+        const data =  {
+            labels: [
+                'Severe',
+                'Moderate',
+                'Mild',
+                'None'
+            ],
+            datasets: [{
+                label: 'My First Dataset',
+                data: [2, 4, 8,6],
+                backgroundColor: [
+                    'rgb(255, 99, 132)',
+                    'rgb(0,128,0)',
+                    'rgb(54, 162, 235)',
+                    'rgb(255, 205, 86)'
+
+                ],
+                hoverOffset: 4
+            }]
+        }
         const ctx = document.getElementById('myChart');
         const myChart = new Chart(ctx, {
-            type: 'bar',
-            data: {
-                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-                datasets: [{
-                    label: '# of Votes',
-                    data: [12, 19, 3, 5, 2, 3],
-                    backgroundColor: [
-                        'rgba(255, 99, 132, 0.2)',
-                        'rgba(54, 162, 235, 0.2)',
-                        'rgba(255, 206, 86, 0.2)',
-                        'rgba(75, 192, 192, 0.2)',
-                        'rgba(153, 102, 255, 0.2)',
-                        'rgba(255, 159, 64, 0.2)'
-                    ],
-                    borderColor: [
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(54, 162, 235, 1)',
-                        'rgba(255, 206, 86, 1)',
-                        'rgba(75, 192, 192, 1)',
-                        'rgba(153, 102, 255, 1)',
-                        'rgba(255, 159, 64, 1)'
-                    ],
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: true
-                    }
-                }
-            }
+            type: 'doughnut',
+            data: data,
+
         });
 
     </script>

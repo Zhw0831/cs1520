@@ -70,5 +70,8 @@ function tabulateAnswers() {
         answerbox.innerHTML = "Wow you feel really good today! Keep up!"
     }
 
+    setTimeout(()=>{
+        window.location.href="/s/chart.html"
+    },3000)
   }
   

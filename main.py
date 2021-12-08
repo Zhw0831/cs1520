@@ -49,6 +49,10 @@ def store_login():
 def signup():
     return render_template('signup.html')
 
+@app.route('/chart.html', methods=['POST','GET'])
+def chart():
+    data = flask.request.form['data']
+    return flask.render_template('chart.html',data = data)
 
 # @app.route('/questions/<id>')
 # def questions(id):
