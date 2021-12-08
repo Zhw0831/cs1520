@@ -1,4 +1,6 @@
 from google.cloud import datastore
+from google.oauth2 import service_account
+
 
 def get_client():
     return datastore.Client()

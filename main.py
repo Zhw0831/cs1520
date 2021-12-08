@@ -3,10 +3,11 @@ import random
 import user
 from google.cloud import datastore
 from flask import flash, redirect, render_template, request, url_for
+from user import get_client
 um = user.User_manager()
 
 app = flask.Flask(__name__)
-client = datastore.Client()
+client = get_client()
 
 
 @app.route('/')
