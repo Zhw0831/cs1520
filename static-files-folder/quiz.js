@@ -33,11 +33,42 @@ function tabulateAnswers() {
     // Find out which choice got the highest score.
     // If you add more choices and outcomes, you must add the variable here.
     var maxscore = Math.max(c1score,c2score,c3score,c4score);
+    var level = 0;
+    if(maxscore == 0){
+        level = 0;
+    }
+    else{
+        if(maxscore==c1score){
+            level = 1;
+        }
+        if(maxscore==c2score){
+            level = 2;
+        }
+        if(maxscore==c3score){
+            level = 3;
+        }
+        if(maxscore==c4score){
+            level = 4;
+        }
+    }
     
     // Display answer corresponding to that choice
     var answerbox = document.getElementById('answer');
-    answerbox.innerHTML = "Go to your account page to track your mood scores!"
+    if(level == 0){
+        answerbox.innerHTML = "Please take the quiz to get your mood score!"
+    }
+    if(level == 1){
+        answerbox.innerHTML = "Trust me, everything will be okay. Smile!"
+    }
+    if(level == 2){
+        answerbox.innerHTML = "Don't worry and look ahead!"
+    }
+    if(level == 3){
+        answerbox.innerHTML = "Keep up the mood! Have a great day!"
+    }
+    if(level == 4){
+        answerbox.innerHTML = "Wow you feel really good today! Keep up!"
+    }
 
-    // If you add more choices, you must add another response below.
   }
   
