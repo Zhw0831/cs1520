@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="/s/chart.min.js"></script>
+    <link rel="stylesheet" href="/s/style.css">
+    <style>
+        body{
+            background: linear-gradient(to right,#99EE99,#99EE99,#C7F6B6,#C7F6B6,#E2FAB5,#E2FAB5,#FFF9C2,#FFFCD1);
+        }
+        .nav-link:hover {
+            filter: grayscale(0%) opacity(1);
+            color: whitesmoke;
+        }
+        .desp{
+            font-size: 24px;
+        }
+        .text-container{
+            text-align: center;
+            margin: auto;
+            position: absolute;
+            top: 33rem;
+            left: 0;
+            right: 0;
+        }
+
+        .main{
+            text-align: center; /*让div内部文字居中*/
+            width: 480px;
+            height: 30rem;
+            margin: auto;
+            position: absolute;
+            top: 3rem;
+            left: 0;
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a href="/s/welcome.html" class="nav-link">
+                    <span class="link-text">Welcome</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="/s/quiz.html" class="nav-link">
+                    <span class="link-text">Take the Quiz</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="/s/resources.html" class="nav-link">
+                    <span class="link-text">Resources</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="/login.html" class="nav-link">
+                    <span class="link-text">Login</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <div class="main">
+        <canvas id="myChart" width="200" height="200"></canvas>
+    </div>
+    <br>
+    <div class="text-container">
+        <div class="desp">
+            Severe part occupies <i>2</i>/20.
+        </div>
+        <br>
+        <div class="desp">
+            Moderate part occupies <i>4</i>/20.
+        </div>
+        <br>
+        <div class="desp">
+            Mild part occupies <i>8</i>/20.
+        </div>
+        <br>
+        <div class="desp">
+            None part occupies <i>6</i>/20.
+        </div>
+        <br>
+        <div class="desp">
+            Based on the previous questions, your mentally injured state is at level 2.
+        </div>
+        <br>
+        <div class="desp">
+            Congratulations, you are in good spirits!
+        </div>
+    </div>
+    <script>
+        const data =  {
+            labels: [
+                'Severe',
+                'Moderate',
+                'Mild',
+                'None'
+            ],
+            datasets: [{
+                label: 'My First Dataset',
+                data: [2, 4, 8,6],
+                backgroundColor: [
+                    'rgb(255, 99, 132)',
+                    'rgb(0,128,0)',
+                    'rgb(54, 162, 235)',
+                    'rgb(255, 205, 86)'
+
+                ],
+                hoverOffset: 4
+            }]
+        }
+        const ctx = document.getElementById('myChart');
+        const myChart = new Chart(ctx, {
+            type: 'doughnut',
+            data: data,
+
+        });
+
+    </script>
+</body>
+</html>
