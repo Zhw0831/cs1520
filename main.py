@@ -30,6 +30,10 @@ def login():
 def signup():
     return flask.render_template('signup.html')
 
+@app.route('/user.html', methods=['POST', 'GET'])
+def personal():
+    return flask.render_template('user.html')
+
 @app.route('/questions/<id>')
 def questions(id):
     # TODO fetch data from database, removing the following lanes later
@@ -43,7 +47,7 @@ def questions(id):
 
     return flask.render_template("quiz.html", choices=choices_ans[int(id)],id = id)
 
-@app.route('/create-thing', methods=['GET', 'POST'])
+@app.route('/login', methods=['GET', 'POST'])
 def store():
     email = flask.request.form['email']
     password = flask.request.form['password']
@@ -51,7 +55,23 @@ def store():
     thing['email'] = email
     thing['password'] = password
     update_thing(thing)
-    return login()
+    return root()
+
+@app.route('/send', methods=['GET', 'POST'])
+def register_user():
+    email = flask.request.form['email']
+    password = flask.request.form['password']
+    age = flask.request.form['age']
+    gender = flask.request.form['gender']
+   
+    thing = create_thing()
+    thing['email'] = email
+    thing['password'] = password
+    thing['age'] = age
+    thing['gender'] = gender
+    update_thing(thing)
+    print("You have successfully signed up with email", email)
+    return flask.render_template("user.html", email = email, age = age, gender = gender)
 
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port=8080, debug=True)

@@ -9,9 +9,6 @@
 
 <body>
 
-<!-- <audio controls>
-  <source src="/s/Always With Me(Piano).mp3" type="audio/mpeg" />
-</audio> -->
 <audio id="audioplayer" autobuffer="" loop="true" preload="auto" src="/s/Always With Me(Piano).mp3">
 </audio>
 <script src="/s/audio.js"></script>
@@ -49,33 +46,6 @@
 
 <main>
 <div class="welcome">
-    <!-- <h1 class="welcomeBlock">
-        Let's Have A Great Day!
-    </h1>
-    
-    <button id="loginButton">Click here to get started!</button> -->
-    
-    <!-- <div id="signIn" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <p>Sign in to get your results to your email</p>
-            
-            <form method="post" action="/create-thing">
-                Email:
-                <br>
-                <input type="text" name="email">
-                <br><br>
-                Password:
-                <br>
-                <input type="password" name="pwd">
-                <br><br>
-                <button type="submit" value="Submit">Submit</button>                
-            </form>
-            
-        </div>
-    </div>
-
-    <script type="text/javascript" src="/s/login.js"></script> -->
 
     <div class="signup"> 
         <div class="signup-inner">
@@ -89,12 +59,9 @@
             <input type="text" name="age" id="age" class="login-form-field" placeholder = "Age">
 
             <br><br>
-            <form id="gender-choice" action="/send" method="post">
             <label for="female"><input type="radio" name="gender" id="gender-female" class="login-form-field" value="female">Female</label>
             <label for="male"><input type="radio" name="gender" id="gender-male" class="login-form-field" value="male">Male</label>
             <label for="nonbinary"><input type="radio" name="gender" id="gender-nonbinary" class="login-form-field" value="nonbinary">Non-binary</label>
-            </form>
-
 
             <input type="submit" value="Submit" id="signup-form-submit">
         </form>
